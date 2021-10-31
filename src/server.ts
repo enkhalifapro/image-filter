@@ -33,7 +33,7 @@ import {filterImageFromURL} from './util/util';
 
     // Displays a simple message to the user
     app.get("/filteredimage", async (req, res) => {
-        let url = req.query.image_url
+        const url: string = req.query.image_url
         if (!url) {
             res.status(400).send("image url is missing")
             return
